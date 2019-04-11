@@ -1,0 +1,25 @@
+<div *ngIf="winner">
+  <h2>{{winner.name | uppercase}} Details</h2>
+
+  <table>
+    <thead>
+        <th>Name</th>
+        <th>Disputed Finals</th>
+        <th>Titles</th>
+        <th>City</th>
+        <th>Top Scorer</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{winner.name}}</td>
+            <td>{{winner.disputedFinals}}</td>
+            <td>{{winner.titles}}</td>
+            <td>{{winner.city}}</td>
+            <td>{{winner.topScorer}}</td>
+            
+        </tr>
+    </tbody>
+    <button class="button" (click)="clearrWinner(winner)">Regresar</button>
+  </table>
+  
+</div>

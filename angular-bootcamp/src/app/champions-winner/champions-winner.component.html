@@ -1,0 +1,6 @@
+<ul class="winners">
+  <li *ngFor="let winner of winners" [class.selected]="winner === selectedWinner" (click)="onSelect(winner)">
+    <span class="badge">{{winner.id}}</span> {{winner.name}}
+  </li>
+</ul>
+<app-champions-winner-detail [winner]="selectedWinner"></app-champions-winner-detail>
