@@ -1,6 +1,6 @@
 import { Winner } from '../shared/winner';
 export const WINNERS: Winner[] = [  
-  { id: 1, name: 'Milan', disputedFinals: 11, titles: 7, city: 'Mial', topScorer: 'Andry Shevchenko' },
+  { id: 1, name: 'Milan', disputedFinals: 11, titles: 7, city: 'Milan', topScorer: 'Andry Shevchenko' },
   { id: 2, name: 'Real Madrid', disputedFinals: 16, titles: 13, city: 'Madrid', topScorer: 'Cristiano Ronaldo' },
   { id: 3, name: 'Barcelona', disputedFinals: 8, titles: 5, city: 'Barcelona', topScorer: 'Lionel Messi' },
   { id: 4, name: 'Bayern', disputedFinals: 11, titles: 5, city: ' Múnich', topScorer: 'Cristiano Robnaldo' },
