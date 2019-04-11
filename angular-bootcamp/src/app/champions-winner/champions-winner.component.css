@@ -39,7 +39,7 @@
     padding: 0.8em 0.7em 0 0.7em;
     background-color: #607D8B;
     line-height: 1em;
-    position: relative;
+    position: absolute;
     left: -1px;
     top: -4px;
     height: 1.8em;
