@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Winner } from '../shared/winner'
 
 @Component({
@@ -9,12 +9,16 @@ import { Winner } from '../shared/winner'
 export class ChampionsWinnerDetailComponent implements OnInit {
 
   @Input() winner: Winner;
+
+  @Output() showListCampions = new EventEmitter;
+  show: boolean;
   constructor() { }
 
   ngOnInit() {
   }
   
-  clearrWinner(winner: Winner): void {
+  clearrWinner(event, winner: Winner): void {
     this.winner = null;
+    this.showListCampions.emit({show:true});
   }
 }

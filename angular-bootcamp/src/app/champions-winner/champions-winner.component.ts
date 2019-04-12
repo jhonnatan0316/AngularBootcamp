@@ -12,12 +12,18 @@ export class ChampionsWinnerComponent implements OnInit {
   winners = WINNERS;
   selectedWinner: Winner;
   constructor() { }
-
+  showList: boolean;
   ngOnInit() {
+    this.showList = true;
   }
   
   onSelect(winner: Winner): void {
     this.selectedWinner = winner;
+    this.showList = false;
   }
 
+
+  showTable(event){
+    this.showList = event.show;
+  }
 }
