@@ -40,7 +40,7 @@ export class AnimeFilmComponent implements OnInit {
           console.log('No Film found');
         } else {
           this.selectedFilm = result;
-          console.log('selectef film: ', this.selectedFilm);
+
           this.filmServ.setter(this.selectedFilm);
           this.router.navigate(['/gfilm']);
         }

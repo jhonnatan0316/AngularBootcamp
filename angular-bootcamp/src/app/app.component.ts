@@ -7,5 +7,5 @@ import { ChampionsWinnerComponent } from './champions-winner/champions-winner.co
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Uefa Champions League Winners';
+  title = 'Anime Films';
 }
