@@ -1,0 +1,26 @@
+<div *ngIf="film">
+  <h2>{{film.title | uppercase}} Details</h2>
+
+  <table>
+    <thead>
+      <th>Film Title</th>
+      <th>Release Date</th>
+        <th>Description</th>
+        <th>Director</th>
+        <th>Producer</th>
+    </thead>
+    <tbody>
+        <tr>
+          <td>{{film.title}}</td>
+          <td>{{film.release_date}}</td>
+            <td>{{film.description}}</td>
+            <td>{{film.director}}</td>
+            <td>{{film.producer}}</td>
+            
+        </tr>
+    </tbody>
+    <button class="button" (click)="clearFilm()">Return</button>
+    <button routerLink="/" routerLinkActive="active" >return</button>
+  </table>
+  
+</div>

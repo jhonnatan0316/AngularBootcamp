@@ -6,17 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChampionsWinnerComponent } from './champions-winner/champions-winner.component';
 import { ChampionsWinnerDetailComponent } from './champions-winner-detail/champions-winner-detail.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AnimeFilmComponent } from './anime-film/anime-film.component';
+import { FilmDatailComponent } from './film-datail/film-datail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChampionsWinnerComponent,
-    ChampionsWinnerDetailComponent
+    ChampionsWinnerDetailComponent,
+    AnimeFilmComponent,
+    FilmDatailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

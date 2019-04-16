@@ -1,0 +1,17 @@
+<div class="container">
+  <div><h2>Anime Films</h2></div>
+<table >
+  <thead>
+      <th>Film Title</th>
+      <th>Release Date</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let film of films">
+          <td>{{film.title}}</td>
+          <td>{{film.release_date}}</td>
+          <td><button  (click)="getFilm(film)" style="margin: 10px" >Film Detail</button>
+      </tr>
+  </tbody>
+</table>
+</div>
+<app-film-datail [film]="selectedFilm"></app-film-datail>
