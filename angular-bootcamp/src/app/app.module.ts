@@ -6,9 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChampionsWinnerComponent } from './champions-winner/champions-winner.component';
 import { ChampionsWinnerDetailComponent } from './champions-winner-detail/champions-winner-detail.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AnimeFilmComponent } from './anime-film/anime-film.component';
 import { FilmDatailComponent } from './film-datail/film-datail.component';
+
+import { ResponseInterceptor } from './interceptor/response.interceptor';
+import { RequestInterceptor } from './interceptor/request.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,16 @@ import { FilmDatailComponent } from './film-datail/film-datail.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+      provide: HTTP_INTERCEPTORS,
+      useClass: ResponseInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

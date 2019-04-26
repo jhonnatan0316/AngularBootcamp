@@ -51,21 +51,20 @@ export class AnimeFilmComponent implements OnInit {
     );
 
   }
-  createSession() {
-    const local = localStorage.setItem('DeadPool', '2016');
-    console.log(local);
-    const session = sessionStorage.setItem('Description', 'La mejor pelicula del mundo :D')
-    console.log(session);
+  createStorage() {
+   localStorage.setItem('DeadPool', '2016');
+   sessionStorage.setItem('Description', 'La mejor pelicula del mundo :D');
   }
 
-  deleteSession() {
+  deleteStorage() {
     localStorage.clear();
-    //sessionStorage.removeItem('Description');
+    // sessionStorage.removeItem('Description');
   }
 
   createCookie() {
-    document.cookie = "hello=Do you want a cookie?";
-    document.cookie = "cookie=Expired Cookie?; expires=Fri, 26 Apr 2019 12:00:00 GTM";
+    document.cookie = 'hello=Do you want a cookie?';
+    document.cookie = 'expired=Expired Cookie; expires=Fri, 31 Dec 9999 23:59:59 GTM; path=/expire';
+    // document.cookie = 'expired=Expired Cookie; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/expire';
     console.log(document.cookie);
   }
 }
